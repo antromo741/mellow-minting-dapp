@@ -18,7 +18,7 @@ interface State {
 }
 
 const defaultState: State = {
-  mintAmount: 0,
+  mintAmount: 1,
 };
 
 export default class MintWidget extends React.Component<Props, State> {
