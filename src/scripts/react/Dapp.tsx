@@ -207,24 +207,33 @@ export default class Dapp extends React.Component<Props, State> {
             {!this.isWalletConnected() ? <button className="primary" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
             
             <div className="use-etherscan">
-              Hey, looking for a <strong>super-safe experience</strong>? <span className="emoji">😃</span><br />
-              You can interact with the smart-contract <strong>directly</strong> through <a href={this.state.etherscanUrl} target="_blank">Etherscan</a>, without even connecting your wallet to this DAPP! <span className="emoji">🚀</span><br />
+              Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
+              <br /><strong>Presale Mint: Only people who were Mellow listed in the discord can mint during this sale.</strong> <br />
               <br />
-              Keep safe! <span className="emoji">❤️</span>
+              You can choose to mint 10 additional NFTs during this time, on top of the 10 free NFTs for being Mellow listed <strong>You do not need to add any additonal Mellow dog NFTs and can simply click premint to claim your 10 free NFTs for being an OG</strong> 
+               <span className="emoji">🚀</span><br />
+              <br />
+             Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
             </div>
 
             {!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?
               <div className="merkle-proof-manual-address">
-                <h2>Whitelist Proof</h2>
+                <h2>PreMint Info again, just in case you didnt see the first page :)</h2>
                 <p>
-                  Anyone can generate the proof using any public address in the list, but <strong>only the owner of that address</strong> will be able to make a successful transaction by using it.
+                Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
+              <br /><strong>Presale Mint: Only people who were Mellow listed in the discord can mint during this sale.</strong> <br />
+              <br />
+              You can choose to mint 10 additional NFTs during this time, on top of the 10 free NFTs for being Mellow listed <strong>You do not need to add any additonal Mellow dog NFTs and can simply click premint to claim your 10 free NFTs for being an OG</strong> 
+               <span className="emoji">🚀</span><br />
+              <br />
+             Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
                 </p>
 
-                {this.state.merkleProofManualAddressFeedbackMessage ? <div className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
+             {/*    {this.state.merkleProofManualAddressFeedbackMessage ? <div className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
 
                 <label htmlFor="merkle-proof-manual-address">Public address:</label>
                 <input id="merkle-proof-manual-address" type="text" placeholder="0x000..." disabled={this.state.userAddress !== null} value={this.state.userAddress ?? this.state.merkleProofManualAddress} ref={(input) => this.merkleProofManualAddressInput = input!} onChange={() => {this.setState({merkleProofManualAddress: this.merkleProofManualAddressInput.value})}} /> <button onClick={() => this.copyMerkleProofToClipboard()}>Generate and copy to clipboard</button>
-              </div>
+              */} </div>
               : null}
           </div>
           : null}
