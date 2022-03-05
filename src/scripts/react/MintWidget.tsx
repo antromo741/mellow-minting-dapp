@@ -38,14 +38,14 @@ export default class MintWidget extends React.Component<Props, State> {
 
   private incrementMintAmount(): void {
     this.setState({
-      mintAmount: Math.min(10, this.state.mintAmount + 1),
+      mintAmount: Math.min(20, this.state.mintAmount + 1),
       /* mintAmount: Math.min(this.props.maxMintAmountPerTx, this.state.mintAmount + 1), */
     });
   }
 
   private decrementMintAmount(): void {
     this.setState({
-      mintAmount: Math.max(0, this.state.mintAmount - 1),
+      mintAmount: Math.max(1, this.state.mintAmount - 1),
     });
   }
 
