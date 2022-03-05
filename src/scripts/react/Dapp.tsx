@@ -208,26 +208,42 @@ export default class Dapp extends React.Component<Props, State> {
             
             <div className="use-etherscan">
               Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
+              <br /><strong>Public Mint: You can mint up to 20 Mellow Dogs NFTs per transaction during the public mint sale</strong> <br />
+              <br />
+              <strong>Public Mint price is set at .02 ETH per NFT</strong> 
+               <span className="emoji">🚀</span><br />
+              <br />
+             Hitting the plus button will add an NFT for purchase at the public mint price so please, Keep safe! <span className="emoji">❤️</span>
+            </div>
+
+           {/*  <div className="use-etherscan">
+              Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
               <br /><strong>Presale Mint: Only people who were Mellow listed in the discord can mint during this sale.</strong> <br />
               <br />
               You can choose to mint 10 additional NFTs during this time, on top of the 10 free NFTs for being Mellow listed <strong>You do not need to add any additonal Mellow dog NFTs and can simply click premint to claim your 10 free NFTs for being an OG</strong> 
                <span className="emoji">🚀</span><br />
               <br />
-             Hitting the plus button will add an NFT for purchase at public mint price so please Keep safe! <span className="emoji">❤️</span>
-            </div>
+             Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
+            </div> */}
 
             {!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?
               <div className="merkle-proof-manual-address">
-                <h2>Whitelist Proof</h2>
+                <h2>Public Mint Info again, just in case you didnt see the first page :)</h2>
                 <p>
-                  Anyone can generate the proof using any public address in the list, but <strong>only the owner of that address</strong> will be able to make a successful transaction by using it.
+                Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
+              <br /><strong>Public Mint: You can mint up to 20 Mellow Dogs NFTs per transaction during the public mint sale!</strong> <br />
+              <br />
+              <strong>Public Mint price is set at .02 ETH per NFT</strong> 
+               <span className="emoji">🚀</span><br />
+              <br />
+             Hitting the plus button will add an NFT for purchase at the public mint price so please, Keep safe! <span className="emoji">❤️</span>
                 </p>
 
-                {this.state.merkleProofManualAddressFeedbackMessage ? <div className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
+                 {this.state.merkleProofManualAddressFeedbackMessage ? <div className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
 
                 <label htmlFor="merkle-proof-manual-address">Public address:</label>
                 <input id="merkle-proof-manual-address" type="text" placeholder="0x000..." disabled={this.state.userAddress !== null} value={this.state.userAddress ?? this.state.merkleProofManualAddress} ref={(input) => this.merkleProofManualAddressInput = input!} onChange={() => {this.setState({merkleProofManualAddress: this.merkleProofManualAddressInput.value})}} /> <button onClick={() => this.copyMerkleProofToClipboard()}>Generate and copy to clipboard</button>
-              </div>
+              * </div>
               : null}
           </div>
           : null}
