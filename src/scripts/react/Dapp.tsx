@@ -229,11 +229,11 @@ export default class Dapp extends React.Component<Props, State> {
              Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
                 </p>
 
-             {/*    {this.state.merkleProofManualAddressFeedbackMessage ? <div className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
+                 {this.state.merkleProofManualAddressFeedbackMessage ? <div className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
 
                 <label htmlFor="merkle-proof-manual-address">Public address:</label>
                 <input id="merkle-proof-manual-address" type="text" placeholder="0x000..." disabled={this.state.userAddress !== null} value={this.state.userAddress ?? this.state.merkleProofManualAddress} ref={(input) => this.merkleProofManualAddressInput = input!} onChange={() => {this.setState({merkleProofManualAddress: this.merkleProofManualAddressInput.value})}} /> <button onClick={() => this.copyMerkleProofToClipboard()}>Generate and copy to clipboard</button>
-              */} </div>
+               </div>
               : null}
           </div>
           : null}
