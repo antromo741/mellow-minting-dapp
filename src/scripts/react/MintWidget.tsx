@@ -33,12 +33,12 @@ export default class MintWidget extends React.Component<Props, State> {
   }
 
   private canWhitelistMint(): boolean {
-    return  this.props.isUserInWhitelist;
+    return this.props.isWhitelistMintEnabled && this.props.isUserInWhitelist;
   }
 
   private incrementMintAmount(): void {
     this.setState({
-      mintAmount: Math.min(20, this.state.mintAmount + 1),
+      mintAmount: Math.min(10, this.state.mintAmount + 1),
       /* mintAmount: Math.min(this.props.maxMintAmountPerTx, this.state.mintAmount + 1), */
     });
   }
@@ -76,11 +76,8 @@ export default class MintWidget extends React.Component<Props, State> {
               <button className="decrease" onClick={() => this.decrementMintAmount()}>-</button>
               <span className="mint-amount">{this.state.mintAmount}</span>
               <button className="increase" onClick={() => this.incrementMintAmount()}>+</button>
-              <button className="primary" onClick={() => this.mint()}>Mint</button>
-              
+              <button className="primary" onClick={() => this.mint()}>Pre Mint</button>
             </div>
-
-           
           </div>
           :
           <div className="cannot-mint">
@@ -90,7 +87,6 @@ export default class MintWidget extends React.Component<Props, State> {
             Please come back during the next sale!
           </div>
         }
-        
       </>
     );
   }
