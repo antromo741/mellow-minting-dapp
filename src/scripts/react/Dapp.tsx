@@ -207,10 +207,10 @@ export default class Dapp extends React.Component<Props, State> {
             {!this.isWalletConnected() ? <button className="primary" disabled={this.provider === undefined} onClick={() => this.connectWallet()}>Connect Wallet</button> : null}
             
             <div className="use-etherscan">
-              Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
-              <br /><strong>Presale Mint: Only people who were Mellow listed in the discord can mint during this sale.</strong> <br />
+            Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
+              <br /><strong>Public Mint: You can mint up to 20 Mellow Dogs NFTs per transaction during the public mint sale</strong> <br />
               <br />
-              You can choose to mint 10 additional NFTs during this time, on top of the 10 free NFTs for being Mellow listed <strong>You do not need to add any additonal Mellow dog NFTs and can simply click premint to claim your 10 free NFTs for being an OG</strong> 
+              <strong>Public Mint price is set at .02 ETH per NFT</strong> 
                <span className="emoji">🚀</span><br />
               <br />
              Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
@@ -218,12 +218,13 @@ export default class Dapp extends React.Component<Props, State> {
 
             {!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?
               <div className="merkle-proof-manual-address">
-                <h2>PreMint Info again, just in case you didnt see the first page :)</h2>
+                
+                <h2>Public Mint Info again, just in case you didnt see the first page :)</h2>
                 <p>
                 Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
-              <br /><strong>Presale Mint: Only people who were Mellow listed in the discord can mint during this sale.</strong> <br />
+              <br /><strong>Public Mint: You can mint up to 20 Mellow Dogs NFTs per transaction during the public mint sale</strong> <br />
               <br />
-              You can choose to mint 10 additional NFTs during this time, on top of the 10 free NFTs for being Mellow listed <strong>You do not need to add any additonal Mellow dog NFTs and can simply click premint to claim your 10 free NFTs for being an OG</strong> 
+              <strong>Public Mint price is set at .02 ETH per NFT</strong> 
                <span className="emoji">🚀</span><br />
               <br />
              Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
