@@ -210,7 +210,7 @@ export default class Dapp extends React.Component<Props, State> {
             Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
               <br /><strong>Public Mint: You can mint up to 20 Mellow Dogs NFTs per transaction during the public mint sale</strong> <br />
               <br />
-              <strong>Public Mint price is set at .02 ETH per NFT</strong> 
+              <strong>Public Mint price is set at 0 ETH per NFT</strong> 
                <span className="emoji">🚀</span><br />
               <br />
              Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
@@ -224,7 +224,7 @@ export default class Dapp extends React.Component<Props, State> {
                 Welcome Mellow Dog fam, please connect your MetaMask wallet to get started.<br />
               <br /><strong>Public Mint: You can mint up to 20 Mellow Dogs NFTs per transaction during the public mint sale</strong> <br />
               <br />
-              <strong>Public Mint price is set at .02 ETH per NFT</strong> 
+              <strong>Public Mint price is 0 ETH per NFT</strong> 
                <span className="emoji">🚀</span><br />
               <br />
              Hitting the plus button will add an NFT for purchase at public mint price so please, Keep safe! <span className="emoji">❤️</span>
